@@ -1,0 +1,9 @@
+title 0.6: single page app new note
+
+note over browser
+The browser makes a POST request wich contains 
+the new note as JSON data containing the content
+and the timestamp
+end note
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+server-->browser: Status code 201 created; JSON data: [{"message":"note created"}]
