@@ -99,7 +99,7 @@ const App = () => {
             setNotification({message:null, type:0})
           }, 2000);
           setPersons(persons.filter((person) => {
-            return ( person.id != updatedPerson.id )
+            return ( person.id !== updatedPerson.id )
           }))
           setNewName('')
           setNewNumber('')
@@ -147,7 +147,7 @@ const App = () => {
           setNotification({message:null, type:0})
         }, 2000);
         setPersons(persons.filter((person) => {
-          return ( person.id != id )
+          return ( person.id !== id )
         }))
       })
     }
