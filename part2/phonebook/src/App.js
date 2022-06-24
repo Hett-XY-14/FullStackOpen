@@ -94,10 +94,10 @@ const App = () => {
           setNewNumber('')
         })
         .catch((error) => {
-          setNotification({message:`${updatedPerson.name} was already removed from the server`, type:2})
+          setNotification({message:`${JSON.stringify(error.response.data.error)}`, type:2})
           setTimeout(() => {
             setNotification({message:null, type:0})
-          }, 2000);
+          }, 4000);
           setPersons(persons.filter((person) => {
             return ( person.id !== updatedPerson.id )
           }))
@@ -119,7 +119,13 @@ const App = () => {
           setTimeout(() => {
             setNotification({message:null, type:0})
           }, 2000);
-      })
+        })
+        .catch((error) => {
+          setNotification({message:`${JSON.stringify(error.response.data.error)}`, type:2})
+          setTimeout(()=>{
+            setNotification({message:null, type:0})
+          }, 4000);
+        })
     }
   }
 
