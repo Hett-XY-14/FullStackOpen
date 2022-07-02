@@ -4,6 +4,7 @@ import Form from "./components/Form";
 import Numbers from "./components/Numbers";
 import phonebookService from "./services/phonebookService";
 import Notification from "./components/Notification";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [persons, setPersons] = useState([])
@@ -177,7 +178,10 @@ const App = () => {
       <div className="subtitle contacts">
         <h3>contacts</h3>
       </div>
-      <Numbers persons={personsFiltered} onDeletion={onDeletion}/>
+      <div id="numbers-container">
+        <Numbers persons={personsFiltered} onDeletion={onDeletion}/>
+      </div>
+      <Footer />
     </div>
   )
 }
