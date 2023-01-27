@@ -7,8 +7,7 @@ describe('Note app', function() {
             username: 'Elixhir',
             password: 'Creopaxta1'
         }
-        cy.request('POST', `http://localhost:3000/api/users/`, user)
-        
+        cy.request('POST', 'http://localhost:3000/api/users/', user)
     })
 
     it('front page can be opened', function() {
@@ -26,7 +25,7 @@ describe('Note app', function() {
         cy.get('input[name=Password]').type('Creopaxta1')
         cy.get('#login-button').click()
     })
-    
+
     it('Login fails with invalid credentials', function() {
         cy.contains('login').click()
         cy.get('input[name=Username]').type('Elixhir')

@@ -1,4 +1,4 @@
-const Logout = ({username, handleLogout}) => {
+const Logout = ({ username, handleLogout }) => {
     return (
         <p>
             {username} logged-in
@@ -7,6 +7,6 @@ const Logout = ({username, handleLogout}) => {
             </button>
         </p>
     )
-} 
+}
 
-export default Logout;
+export default Logout

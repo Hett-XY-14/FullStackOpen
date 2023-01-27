@@ -1,22 +1,22 @@
-const Login = ({username, password, onUsernameChange, onPasswordChange, handleLogin}) => {
+const Login = ({ username, password, onUsernameChange, onPasswordChange, handleLogin }) => {
     return (
         <form onSubmit={ handleLogin }>
             <div>
                 username
                 <input
-                type="text"
-                value={username}
-                name='Username'
-                onChange={onUsernameChange}
+                    type="text"
+                    value={username}
+                    name='Username'
+                    onChange={onUsernameChange}
                 />
             </div>
             <div>
                 password
                 <input
-                type="password"
-                value={password}
-                name='Password'
-                onChange={onPasswordChange}
+                    type="password"
+                    value={password}
+                    name='Password'
+                    onChange={onPasswordChange}
                 />
             </div>
             <button type="submit" id="login-button">login</button>
@@ -24,4 +24,4 @@ const Login = ({username, password, onUsernameChange, onPasswordChange, handleLo
     )
 }
 
-export default Login;
+export default Login
